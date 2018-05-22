@@ -1,0 +1,110 @@
+$green: #80f9b7;
+$blue: #9abdeb;
+$pink: black;
+$grey: #747373;
+$shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+$font-size: 22px;
+$font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: $font-family;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#search {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#search input[type="text"] {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0);
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  border: 0px;
+  margin: 0px auto;
+  margin-top: -51px;
+  padding-left: 30px;
+  padding-right: 30px;
+  outline: none;
+}
+
+#search .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 61px;
+  margin-left: -70px;
+}
+
+#search .close {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  opacity: 1;
+  padding: 10px 17px;
+  font-size: 27px;
+}
+
+.root {
+    height: 100%;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.progress {
+    width: 510px;
+    box-shadow: $shadow;
+    background-color: white;
+    height: 60px;
+    border-radius: 10px;
+
+    &__bar {
+        background-color: $grey;
+        display: inline-block;
+        height: 100%;
+        border-radius: 10px;
+        transition: width .4s ease-in-out;
+    }
+    &__percentage {
+        font-size: $font-size;
+        font-weight: 200;
+        transition: color .4s ease-in-out;
+        position: absolute;
+        text-align: right;
+        width: 80px;
+        top: calc(50% - 42px);
+        left: calc(50% + 165px);
+    }
+    &__info {
+        height: 50px;
+        text-shadow: $shadow;
+        color: $grey;
+        font-size: $font-size;
+        margin-top: 10px;
+        font-weight: 200;
+    }
+}
